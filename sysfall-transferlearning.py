@@ -9,7 +9,7 @@ from sklearn.utils import class_weight
 from sklearn.metrics import classification_report
 
 # Ruta del dataset
-ruta_dataset = './SisFallDataSet/'
+ruta_dataset = './SisFall/SisFall_dataset/'
 
 def convertir_bits_a_unidades(datos_bits):
     conv_adxl345 = (2 * 16) / (2**13)

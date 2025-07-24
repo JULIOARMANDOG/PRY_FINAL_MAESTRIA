@@ -22,8 +22,8 @@ import seaborn as sns
 import joblib
 
 #Importacion de datos
-X_train_route = 'uci-har/train/X_train.txt'
-y_train_route = 'uci-har/train/y_train.txt'
+X_train_route = 'sample_data/data/uci-har/train/X_train.txt'
+y_train_route = 'sample_data/data/uci-har/train/y_train.txt'
 X_train = pd.read_csv(X_train_route, delim_whitespace=True, header=None)
 y_train = pd.read_csv(y_train_route, delim_whitespace=True, header=None)
 
@@ -51,8 +51,8 @@ print(grid_search.best_score_)
 # Obtener el mejor modelo
 best_model = grid_search.best_estimator_
 # Evaluar el modelo SVM
-X_test_route = 'uci-har/test/X_test.txt'
-y_test_route = 'uci-har/test/y_test.txt'
+X_test_route = 'sample_data/data/uci-har/test/X_test.txt'
+y_test_route = 'sample_data/data/uci-har/test/y_test.txt'
 X_test = pd.read_csv(X_test_route, delim_whitespace=True, header=None)
 y_test = pd.read_csv(y_test_route, delim_whitespace=True, header=None)
 # Convertir y test a un array de numpy

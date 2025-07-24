@@ -29,7 +29,7 @@ random.seed(SEED)
 tf.random.set_seed(SEED)
 os.environ['PYTHONHASHSEED'] = str(SEED)
 
-token_pat ="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"
+#token_pat ="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"
 
 # URL RAW del archivo zip
 url_git = "https://raw.githubusercontent.com/JULIOARMANDOG/PRY_FINAL_MAESTRIA/main/uci-har.zip"
@@ -39,8 +39,9 @@ message_donwload_into_path="Archivo extraído en carpeta 'uci-har"
 message_download_error=" Error al descargar archivo:"
 
 # Crear cabecera donde se incluya el token PAT para la descarga del archivo zip
-headers = {"Authorization": f"token {token_pat}"}
-response_git = requests.get(url_git, headers=headers)
+#headers = {"Authorization": f"token {token_pat}"}
+#response_git = requests.get(url_git, headers=headers)
+response_git = requests.get(url_git)
 
 if response_git.status_code == 200:
     print(f"✅{message_download_ok}")

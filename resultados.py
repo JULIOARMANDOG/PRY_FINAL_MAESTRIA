@@ -64,7 +64,7 @@ def procesar_archivo(ruta_archivo, etiqueta):
 class ImageViewerApp:
     def __init__(self, root, base_folder):
         self.root = root
-        self.root.title("Visualizador de Imágenes del Modelo")
+        self.root.title("Universidad internacional del Ecuador UIDE - Visor de Resultados")
 
         try:
             self.root.state("zoomed")
@@ -150,6 +150,9 @@ class ImageViewerApp:
         self.next_button.grid(row=0, column=1, padx=10)
 
         self.pred_button = ttk.Button(self.btn_frame, text="Predecir Actividad", bootstyle=PRIMARY, command=self.realizar_prediccion)
+
+        self.exit_button = ttk.Button(self.btn_frame, text="Salir ❌", bootstyle=DANGER, command=self.root.quit)
+        self.exit_button.grid(row=0, column=3, padx=10)
 
         self.load_images()
         self.show_image()

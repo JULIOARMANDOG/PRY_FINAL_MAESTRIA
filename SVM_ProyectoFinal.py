@@ -19,8 +19,8 @@ import seaborn as sns
 
 
 # CARGA DE DATOS
-X_train_route = 'uci-har/train/X_train.txt'
-y_train_route = 'uci-har/train/y_train.txt'
+X_train_route = 'sample_data/data/uci-har/train/X_train.txt'
+y_train_route = 'sample_data/data/uci-har/train/y_train.txt'
 
 X_train = pd.read_csv(X_train_route, delim_whitespace=True, header=None)
 y_train = pd.read_csv(y_train_route, delim_whitespace=True, header=None)
@@ -37,8 +37,8 @@ svm_model = SVC(kernel='linear', C=1.0, random_state=44)
 svm_model.fit(X_train, y_train)
 
 # Evaluar el modelo SVM
-X_test_route = 'uci-har/test/X_test.txt'
-y_test_route = 'uci-har/test/y_test.txt'
+X_test_route = 'sample_data/data/uci-har/test/X_test.txt'
+y_test_route = 'sample_data/data/uci-har/test/y_test.txt'
 
 X_test = pd.read_csv(X_test_route, delim_whitespace=True, header=None)
 y_test = pd.read_csv(y_test_route, delim_whitespace=True, header=None)
