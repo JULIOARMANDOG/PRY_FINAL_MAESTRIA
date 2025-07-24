@@ -36,6 +36,7 @@ Para ejecutar cada modelo procedemos de la siguiente forma
 - python sysfall-transferlearning.py
 - python SVM_ProyectoFinal.py
 - python SVM_Gridsearch_ProyectoFinal.py
+- python resultados.py
 
 Para cerrar el entorno virtual ejecutamos el comando
 deactivate
