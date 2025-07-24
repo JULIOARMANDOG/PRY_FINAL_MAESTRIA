@@ -13,11 +13,11 @@ Para levantar el ambiente hay que levantar el entorno virtual con el siguiente c
  python -m venv tf310_env
  
 
-descargamos el dataser SisFall.zip de la siguiente ruta:
+descargamos el dataser SisFall_dataset.zip de la siguiente ruta:
 https://drive.google.com/drive/folders/1QBMA4DbZKUzGq1nvWgu9b9r5wIiCo2Lo?usp=sharing
 
-creamos una carpeta denominada SisFall
-Descomprimir el contenido del SisFall.zip dentro del directorio SisFall creado en la raiz
+creamos una carpeta denominada SisFall en el directorio raiz del proyecto.
+Descomprimir el contenido del SisFall_dataset.zip dentro del directorio SisFall 
 
 luego activamos el entorno virtual
 tf310_env\Scripts\activate
