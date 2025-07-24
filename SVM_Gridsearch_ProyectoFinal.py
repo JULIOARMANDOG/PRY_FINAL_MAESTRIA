@@ -19,6 +19,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 import seaborn as sns
+import joblib
 
 #Importacion de datos
 X_train_route = 'uci-har/train/X_train.txt'
@@ -71,6 +72,11 @@ sns.heatmap(confusion_matrix(y_test, y_pred), annot=True, fmt='d', cmap='Blues',
 plt.title('Matriz de Confusión')
 plt.xlabel('Predicción')
 plt.ylabel('Realidad')
+
+ruta_salida = os.path.join("assets", "svm", "confusion.png")
+os.makedirs(os.path.dirname(ruta_salida), exist_ok=True)  # Crear directorio si no existe
+plt.savefig(ruta_salida, format='png')
+
 plt.show()
 # Grafico de curva ROC
 from sklearn.metrics import roc_curve, auc
@@ -91,6 +97,13 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.title('Curva ROC')
 plt.legend(loc='lower right')
+ruta_salida = os.path.join("assets", "svm", "roc.png")
+os.makedirs(os.path.dirname(ruta_salida), exist_ok=True)  # Crear directorio si no existe
+plt.savefig(ruta_salida, format='png')
 plt.show()
 
+
+joblib.dump(best_model, "modelo_svm_gridsearch.pkl")
+joblib.dump(scaler, "scaler_svm.pkl")
+print("\n✅ Modelo y scaler guardados con éxito.")
 
